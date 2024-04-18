@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		52F67047207A236C0064144C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F67046207A236C0064144C /* AppDelegate.swift */; };
-		52F67049207A236C0064144C /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 52F67048207A236C0064144C /* art.scnassets */; };
 		52F6704B207A236C0064144C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F6704A207A236C0064144C /* ViewController.swift */; };
 		52F6704E207A236C0064144C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52F6704C207A236C0064144C /* Main.storyboard */; };
 		52F67050207A236D0064144C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52F6704F207A236D0064144C /* Assets.xcassets */; };
@@ -18,7 +17,6 @@
 /* Begin PBXFileReference section */
 		52F67043207A236C0064144C /* 二点間の距離.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "二点間の距離.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52F67046207A236C0064144C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		52F67048207A236C0064144C /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		52F6704A207A236C0064144C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		52F6704D207A236C0064144C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		52F6704F207A236D0064144C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,7 +55,6 @@
 			isa = PBXGroup;
 			children = (
 				52F67046207A236C0064144C /* AppDelegate.swift */,
-				52F67048207A236C0064144C /* art.scnassets */,
 				52F6704A207A236C0064144C /* ViewController.swift */,
 				52F6704C207A236C0064144C /* Main.storyboard */,
 				52F6704F207A236D0064144C /* Assets.xcassets */,
@@ -125,7 +122,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52F67049207A236C0064144C /* art.scnassets in Resources */,
 				52F67053207A236D0064144C /* LaunchScreen.storyboard in Resources */,
 				52F67050207A236D0064144C /* Assets.xcassets in Resources */,
 				52F6704E207A236C0064144C /* Main.storyboard in Resources */,
@@ -287,7 +283,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F2FS772AW5;
 				INFOPLIST_FILE = "二点間の距離/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,7 +302,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F2FS772AW5;
 				INFOPLIST_FILE = "二点間の距離/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

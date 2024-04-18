@@ -29,7 +29,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     var SaveText:SCNNode? = SCNNode()
     
     let removeButton = UIButton()
-    let ScanButton = UIButton()
+    let scanButton = UIButton()
     let centermarker = UIImageView()
     
     
@@ -41,33 +41,23 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
          // Show statistics such as fps and timing information
         sceneView.showsStatistics = true
-        
-//        // Create a new scene
-//        let scene = SCNScene(named: "art.scnassets/ship.scn")!
-//
-//         // Set the scene to the view
-//        sceneView.scene = scene
-        
        
-        
-//        distLabel.frame = CGRect(x: sceneView.center.x, y: sceneView.center.y-150, width: 300, height: 40)
-//        distLabel.font = UIFont.systemFont(ofSize: 40)
-//        distLabel.text = "0.00cm"
-        
-        centermarker.image = #imageLiteral(resourceName: "centermarker")
-        centermarker.frame = CGRect(x: 0, y: 0, width: view.frame.size.height/6, height: view.frame.size.height/6)
+
+        centermarker.image = UIImage(systemName: "smallcircle.filled.circle")
+        centermarker.tintColor = UIColor.white
+        centermarker.frame.size = CGSize(width: 50, height: 50)
         centermarker.center = sceneView.center
         
-        ScanButton.setImage(#imageLiteral(resourceName: "OFF"), for: .normal)
-        ScanButton.frame = CGRect(x: 10, y: view.frame.size.height-210, width: view.frame.size.height/5, height: view.frame.size.height/5)
+        scanButton.setTitle("ここから", for: .normal)
+        scanButton.frame = CGRect(x: sceneView.frame.width-100, y: sceneView.frame.height-100, width: 100, height: 50)
         
+            
+        removeButton.setTitle("全消去", for: .normal)
+        removeButton.frame = CGRect(x: 0, y: sceneView.frame.height-100, width: 100, height: 50)
         
-        removeButton.setImage(#imageLiteral(resourceName: "remove"), for: .normal)
-        removeButton.frame = CGRect(x: view.frame.size.width-210, y: view.frame.size.height-210, width: view.frame.size.height/5, height: view.frame.size.height/5)
         
         sceneView.addSubview(centermarker)
-//        sceneView.addSubview(distLabel)
-        sceneView.addSubview(ScanButton)
+        sceneView.addSubview(scanButton)
         sceneView.addSubview(removeButton)
         
        
@@ -111,11 +101,11 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             }
             A = Another
             turn = 1-turn   //startScan
-           ScanButton.setImage(#imageLiteral(resourceName: "ON"), for: .normal)
+           scanButton.setTitle("ここから", for: .normal)
         case 1:
             A = getCenter()
             turn = 1-turn   //endScan
-            ScanButton.setImage(#imageLiteral(resourceName: "OFF"), for: .normal)
+            scanButton.setTitle("ここまで", for: .normal)
         default:
             return
         }
@@ -224,7 +214,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     @objc func scaning(){
         if turn == 0 {
             if getCenter().x != 0.0{
-                 ScanButton.addTarget(self, action: #selector(ViewController.tapScanButton), for: .touchUpInside)
+                 scanButton.addTarget(self, action: #selector(ViewController.tapScanButton), for: .touchUpInside)
             }else{
                 
             }
